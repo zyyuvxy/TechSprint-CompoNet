@@ -59,11 +59,7 @@ export interface UserPreferences {
   profil_publik: boolean;
 }
 
-// ==========================================================================
-// 2. EXPORT DATA DUMMY UTUH COMPONET (WAJIB ADA SEMUA)
-// ==========================================================================
 
-// Data Profil Lengkap Balqis (Memperbaiki Error Profil)
 export const mockUserProfile: UserProfile = {
   nama: 'Balqis Safitri',
   jenis_pengelola: ['Pegiat kompos'],
@@ -80,10 +76,40 @@ export const mockUserProfile: UserProfile = {
 };
 
 // Data Jadwal Dashboard
-export const mockPickupSchedules: PickupSchedule[] = [
-  { id: 's1', tanggal: '2025-04-21', jam: '09:00', limbah: 'Sayuran 25kg', pengelola: 'Bu Sari', status: 'Terjadwal' },
-  { id: 's2', tanggal: '2025-04-21', jam: '13:00', limbah: 'Sisa sayuran', pengelola: 'Pasar Pon', status: 'Menunggu' },
-  { id: 's3', tanggal: '2025-04-21', jam: '14:20', limbah: 'Batang jagung', pengelola: 'Pak Tono', status: 'Terjadwal' },
+export const mockPickupSchedules: any[] = [
+  { 
+    id: 's1', 
+    tanggal: '2025-04-21', 
+    jam: '09:00', 
+    limbah: 'Sayuran 25kg', 
+    pengelola: 'Bu Sari', 
+    vendor: 'Bu Sari', 
+    lokasi: 'Pasar Wage', 
+    pasar: 'Pasar Wage', 
+    status: 'Terjadwal' 
+  },
+  { 
+    id: 's2', 
+    tanggal: '2025-04-21', 
+    jam: '13:00', 
+    limbah: 'Sisa sayuran', 
+    pengelola: 'Pasar Pon', 
+    vendor: 'Pasar Pon', 
+    lokasi: 'Pasar Pon', 
+    pasar: 'Pasar Pon', 
+    status: 'Menunggu' 
+  },
+  { 
+    id: 's3', 
+    tanggal: '2025-04-21', 
+    jam: '14:20', 
+    limbah: 'Batang jagung', 
+    pengelola: 'Pak Tono', 
+    vendor: 'Pak Tono', 
+    lokasi: 'Pasar Wage', 
+    pasar: 'Pasar Wage', 
+    status: 'Terjadwal' 
+  },
 ];
 
 // Data Notifikasi / Log Aktivitas
