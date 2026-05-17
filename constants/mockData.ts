@@ -20,7 +20,7 @@ export interface PickupSchedule {
   jam: string;
   limbah: string;
   pengelola: string;
-  status: 'Terjadwal' | 'Menunggu';
+  status: 'Terjadwal' | 'Menunggu' | 'Selesai';
 }
 
 export interface ActivityLog {
