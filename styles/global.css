@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ==========================================================================
+     KODE WARNA ASLI COMPONET (Sesuai Desain Vika)
+     ========================================================================== */
+  --background: #EAF3E7;          /* Warna Latar Belakang: Krem Mint Lembut */
+  --foreground: #1E3B2F;          /* Warna Teks Utama: Hijau Tua */
+  
+  /* Desain Kartu (Card) */
+  --card: #FFFFFF;                /* Putih Bersih agar Kontras */
+  --card-foreground: #1E3B2F;     /* Teks di dalam Kartu: Hijau Tua */
+  
+  /* Desain Komponen Utama (Warna Primer & Sekunder) */
+  --primary: #1E3B2F;             /* WARNA PRIMER: Hijau Tua Hutan (Sidebar & Judul) */
+  --primary-foreground: #EAF3E7;  /* Teks di atas warna primer */
+  
+  --secondary: #74C365;           /* WARNA SEKUNDER: Hijau Daun Muda */
+  --secondary-foreground: #1E3B2F;
+  
+  /* Desain Tombol & Notifikasi (Warna Aksen) */
+  --accent: #EB8A31;              /* WARNA BUTTON AKTIF: Oranye Estetik */
+  --accent-foreground: #FFFFFF;   /* Teks di dalam tombol: Putih */
+  
+  /* Elemen Pendukung */
+  --popover: #FFFFFF;
+  --popover-foreground: #1E3B2F;
+  --muted: #EAF3E7;
+  --muted-foreground: #5A7365;
+  --border: rgba(30, 59, 47, 0.15);/* Garis pembatas tipis transparan hijau tua */
+  --input: rgba(30, 59, 47, 0.15);
+  --ring: #EB8A31;                 /* Garis fokus saat tombol diklik */
+  
+  --radius: 1rem;                 /* Membuat sudut kartu melengkung bulat estetik */
+
+  /* Desain Khusus Sidebar (Full Hijau Tua ke Bawah) */
+  --sidebar: #1E3B2F;             
+  --sidebar-foreground: #EAF3E7;
+  --sidebar-primary: #EB8A31;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(235, 138, 49, 0.2);
+  --sidebar-accent-foreground: #EB8A31;
+  --sidebar-border: rgba(234, 243, 231, 0.1);
+  --sidebar-ring: #EB8A31;
+}
+
+/* Pemetaan otomatis agar class Tailwind (seperti bg-primary atau text-accent) mengenali warna di atas */
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
