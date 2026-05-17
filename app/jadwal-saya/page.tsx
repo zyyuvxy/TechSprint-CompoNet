@@ -91,7 +91,7 @@ export default function JadwalSayaPage() {
               <div className="grid grid-cols-6 gap-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Nama Pedagang</p>
-                  <p className="font-semibold text-foreground mt-1">{schedule.vendor}</p>
+                  <p className="font-semibold text-foreground mt-1">{schedule.pengelola}</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Jam</p>
