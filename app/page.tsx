@@ -8,6 +8,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { mockUserProfile, mockPickupSchedules, mockActivityLog } from '@/constants/mockData';
 import { useAuth } from '@/lib/auth-store';
+import { redirect } from 'next/navigation';
+
+export default function RootPage() {
+}
 
 export default function DashboardPage() {
   const router = useRouter();
