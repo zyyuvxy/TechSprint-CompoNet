@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { BarChart3, CheckCircle2, TrendingUp, Leaf } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,7 +11,7 @@ import { useAuth } from '@/lib/auth-store';
 
 
 export default function DashboardPage() {
-
+  const router = useRouter();
   const { user, isAuthenticated } = useAuth();
 
   useEffect(() => {
